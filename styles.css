@@ -2,6 +2,7 @@
     /* ### Primary */
     --txt-2: hsl(0, 36%, 70%);
     --provide-email: hsl(0, 93%, 68%);
+    --title-2: black;
 
     /* ### Neutral */
     --txt-1: hsl(0, 6%, 24%);
@@ -17,6 +18,8 @@
 
     --all-font: 'Josefin Sans', sans-serif;
 }
+
+/* mobile layout first */
 
 * {
     margin: 0;
@@ -34,13 +37,118 @@ body {
     justify-content: center;
 }
 
-.image {
-    background-image: url(images/hero-mobile.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.logo {
+    padding: 2.5rem 0 2.5rem 2.5rem;
 }
 
-/* .image {
+.desk-img {
+    display: none;
+}
+
+.mob-img {
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-} */
+    align-items: center;
+    padding: 4rem 0 2rem 0;
+}
+
+.title-1 {
+    color: var(--txt-2);
+    font-family: var(--all-font);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+}
+
+.title-2 {
+    color: var(--title-2);
+    font-family: var(--all-font);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: .7rem;
+}
+
+.intro {
+    color: var(--txt-2);
+    font-family: var(--all-font);
+    text-align: center;
+    padding: 0 3rem 1rem 3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.form {
+    display: flex;
+    position: relative;
+    padding: 0 2rem 0 2rem;
+    margin-bottom: 5rem;
+}
+
+.form-input {
+    height: 60px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid var(--txt-2);
+    padding-left: 25px;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: var(--txt-2)
+}
+
+form-input:focus {
+    border-color: red;
+}
+
+.submit {
+    height: 62px;
+    position: absolute;
+    margin-right: 1.5rem;
+    right: 0px;
+    width: 80px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 15px 40px 4px rgba(206, 151, 151, 0.64);
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+
+
+
+
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+}
+
+
+/* mobile image hides */
+@media (min-width: 650px) {
+
+    .mob-img {
+        display: none;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 650px) {
+
+    .desk-img {
+        display: block;
+    }
+}
