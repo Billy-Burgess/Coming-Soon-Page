@@ -37,7 +37,7 @@ body {
     justify-content: center;
 }
 
-.logo {
+.logo-1 {
     padding: 2.5rem 0 2.5rem 2.5rem;
 }
 
@@ -147,6 +147,10 @@ form-input:focus {
     display: none;
 }
 
+.logo-2 {
+    display: none;
+}
+
 /* .attribution {
     position: relative;
     bottom: 0;
@@ -154,7 +158,7 @@ form-input:focus {
 } */
 
 /* mobile image hides */
-@media (min-width: 650px) {
+@media (min-width: 900px) {
 
     .mob-img {
         display: none;
@@ -162,7 +166,7 @@ form-input:focus {
 }
 
 /* desktop */
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 900px) {
 
     body {
         display: flex;
@@ -177,28 +181,44 @@ form-input:focus {
 
     .desk-img {
         display: flex;
+        height: 100vh;
     }
 
     .txt-container {
-        background-image: url(images/logo.svg);
-        background-repeat: no-repeat;
-        background-position: bottom 32.5rem left 8rem;
-        padding: 6.25rem 5rem 0 5rem;
+        padding: 6.25rem 13.125rem 0 7rem;
+        margin: 0 6.25rem 0 5rem;
     }
 
     .title {
         display: block;
         max-width: 31.25rem;
-        padding-left: 3rem;
+        /* padding-left: 3rem; */
     }
 
     .intro {
         text-align: left;
-        padding-bottom: 3rem;
+        padding: 0 0 3rem 0;
     }
 
-    .logo {
+    .logo-1 {
         display: none;
+    }
+
+    .logo-2 {
+        display: flex;
+        /* padding-left: 3rem; */
+    }
+
+    .form {
+        padding: 0 4rem 0 0;
+    }
+
+    .submit {
+        margin-right: 1.875rem;
+    }
+
+    .error-txt-hidden p {
+        padding: 0.5rem 0 3.5rem 1.5rem;
     }
 
 }
