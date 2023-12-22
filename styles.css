@@ -52,6 +52,10 @@ body {
     width: 100%;
 }
 
+.txt-container {
+    padding-bottom: 6.25rem;
+}
+
 .title {
     display: flex;
     justify-content: center;
@@ -92,7 +96,7 @@ body {
     display: flex;
     position: relative;
     padding: 0 2rem 0 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 0.5rem;
 }
 
 .form-input {
@@ -125,17 +129,29 @@ form-input:focus {
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
 
-
-
-
-
-
-.attribution {
+.error-icon-hidden {
     position: absolute;
-    bottom: 0;
-    align-self: center;
+    right: 120px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
+.error-txt-hidden p {
+    position: absolute;
+    font-family: var(--all-font);
+    color: var(--provide-email);
+    padding: .5rem 0 3rem 3.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+/* .attribution {
+    position: relative;
+    bottom: 0;
+    align-self: center;
+} */
 
 /* mobile image hides */
 @media (min-width: 650px) {
@@ -148,7 +164,41 @@ form-input:focus {
 /* desktop */
 @media screen and (min-width: 650px) {
 
-    .desk-img {
-        display: block;
+    body {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        text-overflow: ellipsis
     }
+
+    .img-container {
+        order: 3;
+    }
+
+    .desk-img {
+        display: flex;
+    }
+
+    .txt-container {
+        background-image: url(images/logo.svg);
+        background-repeat: no-repeat;
+        background-position: bottom 32.5rem left 8rem;
+        padding: 6.25rem 5rem 0 5rem;
+    }
+
+    .title {
+        display: block;
+        max-width: 31.25rem;
+        padding-left: 3rem;
+    }
+
+    .intro {
+        text-align: left;
+        padding-bottom: 3rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
 }
